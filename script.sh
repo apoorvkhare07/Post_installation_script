@@ -80,3 +80,11 @@ then
 		 	apt update 
 		 	apt install google-chrome-stable
 		 
+		 echo "Installing Pip and virtual env. proceed? (y/n)"
+		 read ans
+		 if[[$ans = "y"]]
+		 then
+			apt install python-pip python-dev build-essential 
+			pip install --upgrade pip 
+	    	echo "Installing virtualenviroment"
+	    	pip install --upgrade virtualenv 
