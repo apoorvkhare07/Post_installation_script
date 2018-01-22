@@ -88,3 +88,7 @@ then
 			pip install --upgrade pip 
 	    	echo "Installing virtualenviroment"
 	    	pip install --upgrade virtualenv 
+
+
+	    	NVM,atom,pycharm,webstorm,Laravel,react,composer,npm
+	    	UFW
