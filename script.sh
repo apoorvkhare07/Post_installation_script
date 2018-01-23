@@ -73,16 +73,18 @@ then
 		 
 		 echo "Install Google Chrome ? (y/n)"
 		 read ans
-		 if[[$ans = "y"]]
+		 if [[$ans = "y"]]
 		 then
 		 	wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
 		 	sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
 		 	apt update 
 		 	apt install google-chrome-stable
-		 
+		 fi
+
 		 echo "Installing Pip and virtual env. proceed? (y/n)"
 		 read ans
-		 if[[$ans = "y"]]
+		 
+		 if [[$ans = "y"]]
 		 then
 			apt install python-pip python-dev build-essential 
 			pip install --upgrade pip 
@@ -90,5 +92,4 @@ then
 	    	pip install --upgrade virtualenv 
 
 
-	    	NVM,atom,pycharm,webstorm,Laravel,react,composer,npm
-	    	UFW
+	    	Angular,Laravel,react,composer
