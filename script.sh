@@ -81,6 +81,8 @@ then
 		 	apt install google-chrome-stable
 		 fi
 
+		 #Pip and venv
+
 		 echo "Installing Pip and virtual env. proceed? (y/n)"
 		 read ans
 		 
@@ -90,6 +92,17 @@ then
 			pip install --upgrade pip 
 	    	echo "Installing virtualenviroment"
 	    	pip install --upgrade virtualenv 
+	     fi
 
+	     #Composer	
+	     echo "Installing composer proceed? (y/n)"
+		 read ans
+		 
+		 if [[$ans = "y"]]
+		 then
+		 	curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
+		 fi
 
-	    	Angular,Laravel,react,composer
+		 
+		    	
+
